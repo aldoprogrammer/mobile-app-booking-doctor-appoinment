@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:doctor_booking_appointment/doctor_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -256,13 +257,13 @@ class HomeScreen extends StatelessWidget {
                                     children: [
                                       InkWell(
                                         onTap: () {
-                                          // Navigator.push(
-                                          //   context,
-                                          //   MaterialPageRoute(
-                                          //     builder: (context) =>
-                                          //         DoctorProfileScreen(),
-                                          //   ),
-                                          // );
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DoctorScreen(),
+                                            ),
+                                          );
                                         },
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.only(
