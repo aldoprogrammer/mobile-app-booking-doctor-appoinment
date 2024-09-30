@@ -111,13 +111,60 @@ class UpcomingSchedule extends StatelessWidget {
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                            width: 150,
+                            padding: EdgeInsets.symmetric(vertical: 12),
+                            decoration: BoxDecoration(
+                              color: Color(0xfff4f6fa),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Cancel",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            )),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          width: 150,
+                          padding: EdgeInsets.symmetric(vertical: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Reschedule",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 15,
                   ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
