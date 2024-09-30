@@ -205,6 +205,96 @@ class AppointmentScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "${index + 8}",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: index == 1
+                                            ? Colors.white
+                                            : Colors.black.withOpacity(0.6),
+                                      ),
+                                    ),
+                                    Text(
+                                      "DEC",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: index == 1
+                                            ? Colors.white
+                                            : Colors.black.withOpacity(0.6),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Book Time",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black.withOpacity(0.6),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      height: 70,
+                      child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 6,
+                          itemBuilder: (context, index) {
+                            return InkWell(
+                              onTap: () {},
+                              child: Container(
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 5,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 8,
+                                  horizontal: 25,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: index == 2
+                                      ? Colors.redAccent
+                                      : Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 4,
+                                      spreadRadius: 2,
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Center(
+                                      child: Text(
+                                        "${index + 6}: 00 PM",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: index == 2
+                                              ? Colors.white
+                                              : Colors.black.withOpacity(0.6),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           }),
@@ -213,6 +303,48 @@ class AppointmentScreen extends StatelessWidget {
                 ),
               )
             ],
+          ),
+        ),
+        bottomNavigationBar: Container(
+          padding: EdgeInsets.all(10),
+          height: 90,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 4,
+                spreadRadius: 4,
+              )
+            ],
+          ),
+          child: InkWell(
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => const AppointmentScreen(),
+            //     ),
+            //   );
+            // },
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              padding: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                color: Colors.redAccent,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Text(
+                  "Book Now",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
       ),
