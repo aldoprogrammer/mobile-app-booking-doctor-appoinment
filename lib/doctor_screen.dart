@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:doctor_booking_appointment/appointment_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -393,15 +394,14 @@ class DoctorScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => BookingScreen(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AppointmentScreen(),
+                    ),
+                  );
                 },
                 child: Container(
-                  // height: 50,
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.symmetric(vertical: 10),
                   decoration: BoxDecoration(
@@ -419,7 +419,7 @@ class DoctorScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
