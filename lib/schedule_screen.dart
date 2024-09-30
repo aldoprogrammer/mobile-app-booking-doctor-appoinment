@@ -1,3 +1,4 @@
+import 'package:doctor_booking_appointment/widgets/upcoming_schedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   int _buttonIndex = 0;
 
   final _scheduleWidgets = [
-    Container(),
+    UpcomingSchedule(),
     Container(),
     Container(),
   ];
