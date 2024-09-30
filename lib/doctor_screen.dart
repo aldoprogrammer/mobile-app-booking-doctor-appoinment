@@ -321,10 +321,105 @@ class DoctorScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: Colors.black.withOpacity(0.7),
                       ),
+                    ),
+                    ListTile(
+                      leading: Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Color(0xfff0eefa),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.location_on,
+                          color: Colors.redAccent,
+                          size: 30,
+                        ),
+                      ),
+                      title: Text(
+                        "New York, Medical Center",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      subtitle: Text(
+                        "Address line of the medical center",
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
                     )
                   ],
                 ),
               ),
+            ],
+          ),
+        ),
+        bottomNavigationBar: Container(
+          padding: EdgeInsets.all(15),
+          height: 140,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 4,
+                spreadRadius: 2,
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Consultaion Fee",
+                    style: TextStyle(
+                      color: Colors.black45,
+                    ),
+                  ),
+                  Text(
+                    "\$100",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.redAccent.withOpacity(0.8),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              InkWell(
+                onTap: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => BookingScreen(),
+                  //   ),
+                  // );
+                },
+                child: Container(
+                  // height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.redAccent,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Book Now",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
