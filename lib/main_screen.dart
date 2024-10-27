@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),
-            label: "Home",
+            label: "Home Bro",
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.chat_bubble_text_fill),
